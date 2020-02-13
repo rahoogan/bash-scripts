@@ -41,7 +41,7 @@ ifc=$1
 shift
 
 # Check interface exists
-ip a show vmnet8 up > /dev/null 2>&1
+ip a show $ifc up > /dev/null 2>&1
 if [[ ! $? ]]; then
     echo "Invalid interface -$ifc - does not exist or is not up"
     help
